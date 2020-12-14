@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>App filmes</title>
+    <style>
+        pre{
+            padding: 29px;
+            background: #ccc;
+            border-radius: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <pre id="debug"></pre>
+        <h1>Filmes</h1>
+        <form action="" class="jumbotron">
+            <div class="row">
+                <div class="col-4">
+                    <label>Titulo</label>
+                    <input onkeyup="atualizarDados()" type="text" class="form-control" id="titulo"
+                    placeholder="Titulo">
+                </div>
+                <div class="col-3">
+                    <label>Link</label>
+                    <input onkeyup="atualizarDados()" type="url" class="form-control" id="link"
+                    placeholder="Url">
+                </div>
+                <div class="col-3">
+                    <label>Categoria</label>
+                    <select onchange="atualizarDados()" class="form-control" id="categoria">
+                        <option>Categria 1</option>
+                        <option>Categria 2</option>
+                        <option>Categria 3</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <label>Ano</label>
+                    <input onkeyup="atualizarDados()" type="number" id="ano" class="form-control">
+                </div>
+            </div>
+            <br>
+            <a href="javascript:void(0)" onclick="cadastrar()" class="btn btn-lg btn-block btn-success">
+                Cadastrar filme
+            </a>
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Ano</th>
+                    <th scope="col" class="text-right">Ações</th>
+                </tr>
+            </thead>
+            <tbody id="lista_filmes">
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+<script type="text/javascript" src="./script.js">
+ 
+</script>
+</html>
